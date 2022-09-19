@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --nav-color: #32353d;
+    --side-nav: #383a3f;
+    --text-color: #FFF;
+    --search-bar: #F2F2F2;
+    --search-text: #02050e;
+}
+
+.frame {
+    height: 500%;
+    width: 300%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: url("/source/img/Pattern.png");
+}
+
+body, 
+    body span, 
+    body div {
+        cursor: url("/source/cursor/kredka.png"), auto!important;
+    }
+    
+
+    body.cursor-customizer103.cursor-customizer104.cursor-customizer105.cursor-customizer106,
+    body.cursor-customizer103.cursor-customizer104.cursor-customizer105.cursor-customizer106 span,
+    body.cursor-customizer103.cursor-customizer104.cursor-customizer105.cursor-customizer106 div {
+        cursor: url("/source/cursor/kredka.png"), auto!important;
+    }
+
+
+    /* Cursor customization for links  */
+
+    body a {
+        cursor: url("/source/cursor/kredka.png"), pointer!important;
+    }
+    
+    body a.cursor-customizer103.cursor-customizer104.cursor-customizer105.cursor-customizer106 {
+        cursor: url("/source/cursor/kredka.png"), pointer!important;
+    }
+
+nav {
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    background-color: var(--nav-color);
+    z-index: 100;
+}
+
+nav .nav-bar{
+    position: relative;
+    height: 100%;
+    max-width: 1000px;
+    width: 100%;
+    background-color: var(--nav-color);
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .nav-bar .sidebarOpen{
+    color: var(--text-color);
+    font-size: 25px;
+    padding: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+nav .nav-bar .logo a{
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.menu .logo-toggle{
+    display: none;
+}
+
+.nav-bar .nav-links{
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar .nav-links li{
+    margin: 0 5px;
+    list-style: none;
+}
+
+.nav-links li a{
+    position: relative;
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 10px;
+}
+
+.nav-links li a::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background-color: var(--text-color);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.nav-links li:hover a::before{
+    opacity: 1;
+}
+
+@media (max-width: 790px) {
+    nav .nav-bar .sidebarOpen{
+        display: block;
+    }
+
+    .menu{
+        position: fixed;
+        height: 100%;
+        width: 320px;
+        left: -100%;
+        top: 0;
+        padding: 20px;
+        background-color: var(--side-nav);
+        z-index: 100;
+        transition: all 0.4s ease;
+    }
+
+    nav.active .menu{
+        left: -0%;
+    }
+
+    nav.active .nav-bar .navLogo a{
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+
+    .menu .logo-toggle{
+        display: block;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo-toggle .siderbarClose{
+        color: var(--text-color);
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .nav-bar .nav-links{
+        flex-direction: column;
+        padding-top: 30px;
+    }
+
+    .nav-links li a{
+        display: block;
+        margin-top: 20px;
+    }
+
+    section {
+        top: 80px;
+        padding: 20px 10%;
+    }
+}
+
+section {
+    position: sticky;
+    padding: 20px 30%;
+    width: 100%;
+}
+
+/* Scroll */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #dddddd;
+    box-shadow: inset 0 0 0px rgb(75, 137, 230);
+    border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #db1d5c;
+    border-radius: 20px;
+}
+
+/* Rick */
+.rick {
+    color: #8b8880;
+    position: relative;
+}
+
+.rick:hover {
+    color: rgb(49, 63, 63);
+}
+
+/* inne */
+.kot {
+    color: #bd44b7;
+    position: relative;
+}
+
+.kot:hover {
+    color: rgb(190, 47, 107);
+}
+
+.kiosel {
+    height: 30px;
+    width: 30px;
+    border-radius: 12px;
+}
+
+.top {
+    width: 100%;
+    border-radius: 10px;
+    margin: 10px 20px;
+}
+
+.top .text {
+    width: 100%;
+    position: sticky;
+    font-style: oblique;
+    padding-left: 10%;
+    font-size: 25px;
+}

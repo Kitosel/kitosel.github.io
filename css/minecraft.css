@@ -1,0 +1,47 @@
+.download {
+    margin-left: 12%;
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px,500px));
+    justify-content: space-evenly;
+}
+
+.download-button {
+    color: white;
+    margin: 1px;
+    padding: 10px 10px;
+    font-size: 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    background-color: dodgerblue;
+}
+
+#txt {
+    color: black;
+    font-size: 20px;
+    margin-top: 0%;
+    margin-left: 45%;
+    padding: 10px 10px;
+    background-color: rgb(218, 218, 218);
+    border-radius: 12px;
+}
+
+
+@media (max-width: 790px) {
+    #txt {
+        color: black;
+        font-size: 20px;
+        margin-top: 0%;
+        margin-left: 35%;
+        padding: 10px 10px;
+        background-color: rgb(218, 218, 218);
+        border-radius: 12px;
+    }
+}
+
+.text {
+    padding: 10px 10px;
+    font-size: 20px;
+    border-radius: 12px;
+    color: black;
+}

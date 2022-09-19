@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+
+    background: url("/img/Pattern.png");
+}
+.container{
+    position: relative;
+    min-height: 100vh;
+    max-width: 1800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.search-box i{
+    position: absolute;
+    z-index: 2;
+    color: #999;
+    top: 50%;
+    left: 15px;
+    font-size: 20px;
+    transform: translateY(-50%);
+}
+.container .images .image-box{
+    position: relative;
+    height: 300px;
+    width: 210px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.images{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.images .image-box{
+    margin: 8px;
+}
+.images .image-box img{
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+    transition: transform 0.3s linear;
+}
+.image-box:hover img{
+    transform: scale(1.10);
+}
+
+/* scroll */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #dddddd;
+    box-shadow: inset 0 0 0px rgb(75, 137, 230);
+    border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #db1d5c;
+    border-radius: 20px;
+}
+
+.lunar {
+    height: 300px;
+    width: 240px;
+    border-radius: 5px;
+}
+
+.lunabutton {
+    padding: 10px 15px;
+    font-size: 20px;
+    outline: none;
+    border: 100px;
+    background-color: #a267e6;
+    color: #fff;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 1s;
+
+    
+    position: absolute;
+    top: 25px;
+    right: 30px;
+}
+
+.lunabutton:hover {
+    background-color: #c327e2;
+}
+
+.toast.active ~ .lunabutton {
+    pointer-events: none;
+}
